@@ -1,0 +1,26 @@
+data class User(val id: Long, var name: String) //primary constructor must have atleast 1 parameter
+//the data class cant be open ,abstarct , cealed or inner classes
+// u need to use var or val
+
+fun main() {
+    val user1 = User(1, "Harsh")
+    // val name = user1.name //to access
+    user1.name = "shilu" // reassign
+
+    val user2 = User(1, "shilu")
+    println(user1 == user2) //prints true
+
+    println("User details $user1")
+
+    val updatedUser = user1.copy(name = "Harsh Tiwari")
+    println(user1)
+    println(updatedUser)
+
+    //to get component:
+    println(updatedUser.component1()) //prints 1
+    println(updatedUser.component2()) //prints harsh tiwari
+
+
+    val (id, name) = updatedUser
+    println("id = $id , name = $name")
+}

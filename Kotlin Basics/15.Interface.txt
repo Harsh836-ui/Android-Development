@@ -1,0 +1,61 @@
+interface Drivable{
+   val maxSpeed : Double
+    fun drive() : String //there is no implementation of this fun here
+    fun brake(){
+        println("The drivable is braking")
+    }
+}
+
+
+
+open class Car(override val maxSpeed : Double , val name: String, val brand: String) : Drivable{
+
+    open var range: Double = 10.0
+    fun extendRange(amount: Double) {
+        if(amount > 0) {
+            range += amount
+        }
+        println("New range is $range")
+    }
+
+    override fun drive() : String{ // we have to complete the function of the interface , in class
+        return "driving the interface drive"
+    }
+
+
+    open fun drive(distance: Double){
+        println("Drove for $distance KM")
+    }
+
+    open var doors : Int = 4
+}
+class ElectricCar(maxSpeed: Double,name: String, brand: String, batteryLife: Double) : Car( maxSpeed,name, brand) {
+    var chargerType = "Type1"
+    override var range = batteryLife/6
+    override fun drive(distance: Double){
+        println("Drove for $distance KM on electricity")
+    }
+    override var doors = 5
+
+    override fun brake() {
+        super.brake()
+    }
+
+    override fun drive(): String {
+        return super.drive()
+    }
+}
+fun main(args: Array<String>){
+    var audiA3 = Car(120.5,"A3", "Audi")
+    var teslaS = ElectricCar(176.5,"S-Model", "Tesla", 120.0)
+    audiA3.drive(200.0)
+    teslaS.drive(200.0)
+
+ var myDrive : String = teslaS.drive()
+    println("$myDrive")
+    teslaS.brake()
+    audiA3.brake()
+    teslaS.extendRange(100.0)
+    audiA3.extendRange(100.0)
+    println("Number of doors is ${audiA3.doors}")
+}

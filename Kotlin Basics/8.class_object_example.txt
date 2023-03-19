@@ -1,0 +1,93 @@
+package harsh.my.a1kotlinbasics
+
+import kotlin.io.println as println
+import kotlin.text.toLowerCase as toLowerCase
+
+/*class Lamp {
+    private var isOn: Boolean = false
+
+    fun turnOn() {
+        isOn = true
+    }
+
+    fun turnOff() {
+        isOn = false
+    }
+
+    fun displayLightStatus(lamp: String) {
+        if (isOn == true)
+            println("$lamp lamp is on ")
+        else println("$lamp lamp is off ")
+    }
+}
+
+fun main (args: Array<String>){
+    val l1 = Lamp()
+    val l2 = Lamp()
+
+    l1.turnOn()
+    l2.turnOff()
+
+    l1.displayLightStatus("l1")
+    l2.displayLightStatus("l2")
+
+}*/
+
+class Library(){
+
+}
+
+fun main(args: Array<String>){
+
+
+}
+/*
+fun main() {
+    *//*var hrsh = Person("Harsh" , "Tiwari") //Here we created our own datatype person
+    var shilu = Person()
+    var nikita = Person(lastName = "Tiwari")
+//var shilu = Person("Shilu" , "Tiwari")
+
+    var SamsngS20 = MobilePhone("Android" ,"Samsung" , "Galaxy S20 Ultra" )
+*//*
+var Student1 = Student("Harsh Tiwari" , 85 , 13 , 'a')
+var Student2 = Student("John Doe" , 34 , 12 , 'b')
+
+    var Car1 = car("734MX23" , "Mp01723234" , 3 )
+
+
+
+}*/
+
+
+/*class Person(firstName: String = "Shilu", lastName: String = "Tiwari"){
+
+    //initialiser Block:
+    init {
+        println("Person Created with firstname = $firstName and lastname = $lastName")
+    }
+}*/
+
+
+/*class MobilePhone(osName : String , Brand : String , Model : String){
+
+    init {
+        println("Here the OsName is $osName , brand  is $Brand , Model is $Model")
+    }
+
+}*/
+/*
+class Student(SName : String , Rno: Int , Class  : Int  , Section : Char ){
+    init{
+        println("Here Student Name is $SName , Class is $Class , Section is $Section")
+    }
+}
+
+class car(EngineModel : String , CarNum : String , Windows : Int){
+    init{
+        println("I've bought a car with model  $EngineModel with Number $CarNum  ")
+    }
+}*/
+
+
+

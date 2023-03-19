@@ -1,0 +1,44 @@
+fun main() {
+//Different ways to create an array:
+    /*val numbers: IntArray = intArrayOf(1, 2, 3, 4, 5, 6)
+OR:
+     val numbers = intArrayOf(1, 2, 3, 4, 5, 6)
+*/
+    val numbers = arrayOf(1, 2, 3, 4, 5, 6)  //we will use it
+    //----Print an array:
+// we cant do directly print(numbers) as it will give address of array
+
+
+    print("Initial values : ${numbers.contentToString()}") //utility method given by kotlin to us
+    print("\n")
+    //---------traverse through the array:
+/*    for (value in numbers) {
+        print(" $value ")
+    }
+    print("\n")*/
+    //-------Modifications:
+    for (value in numbers) {
+        print("${value + 2} ") //note it doesnt impact the actual array values
+    }
+    print("\n")
+
+//---------Modifying and accessing the values in array:
+    print(numbers[0]) //prints 1
+
+    numbers[0] = 12 //assigning different values
+    numbers[1] = 3
+    numbers[2] = 32
+    numbers[3] = 34
+    numbers[4] = 53
+
+    println("final values : ${numbers.contentToString()}")
+
+
+//String Array:
+    val days = arrayOf("sun", "Mon", "wed", "thu", "fri", "sat")
+    println("Days of the week are ${days.contentToString()}")
+    //Double Array :
+    val numbersD = arrayOf(1.0, 2.0, 4.0, 5.0)
+
+
+}

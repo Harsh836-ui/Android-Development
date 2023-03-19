@@ -1,0 +1,51 @@
+	-------LISTS  can be used to hold both both single datatypes and custom types and classes
+
+
+fun main() {
+    val months = listOf(jan, feb, march)
+    val anyTypes = listOf(1, 2, 3, true, false, string) list can contain any type of datatype
+    println(anyTypes.size)
+    accessing item of given list
+    for (value in anyTypes) {
+        print($value )
+    }
+    print(n )
+we cannot add new items to these list like months and anytypes
+therefore we have to convert our immutable list to mutable list
+
+    val additionalMonths = months.toMutableList()
+    val newMonths = arrayOf(April, May, June)
+    additionalMonths.addAll(newMonths)
+    println(additionalMonths) can print it directly
+
+we can also add like
+    additionalMonths.add(july)
+    println(additionalMonths) can print it directly
+
+    To create a mutable list of anytype
+    val days = mutableListOfString(sun, Mon, Tue)
+    days.add(Thu)
+    println(days)
+    override and remove
+
+    days[2] = wednesday
+    days.removeAt(3)
+    println(days)
+
+    val remList = mutableListOfString(Mon, wednesday)
+    To remove all
+
+    days.removeAll(remList) removes the part of list we mentioned
+    println(days)
+
+    OR
+    days.removeAll(days)
+    println(days) remove all items and prints [] empty
+
+    
+
+    days.clear() clears the whole list
+    println(days)
+
+
+}

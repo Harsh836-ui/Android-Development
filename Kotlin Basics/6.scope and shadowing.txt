@@ -1,0 +1,15 @@
+fun main() {
+//------------SCOPE AND SHADOWING:
+
+    myFunction(5)
+
+}
+
+//this a is a parameter
+fun myFunction(a: Int) {
+    // a is a variable
+    var a = 4
+//var a = a // this will print 5
+    println("a is $a") //prints 4 if above line is run else print 5 if you do var a = a(shadowing)
+
+}

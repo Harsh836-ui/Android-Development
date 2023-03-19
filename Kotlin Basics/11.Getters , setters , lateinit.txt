@@ -1,0 +1,53 @@
+package harsh.my.a1kotlinbasics
+
+import java.lang.IllegalArgumentException
+import kotlin.io.println as println
+import kotlin.text.toLowerCase as toLowerCase
+
+//lateinit Setters and getters:
+
+fun main() {
+    var myCar = Car()
+    println("${myCar.owner}")
+    println("Brand is : ${myCar.myBrand}")
+    myCar.maxSpeed = 492 //we set the value
+    println("Maxpseed is ${myCar.maxSpeed}") //we get the value
+    println("model is ${myCar.myModel}")
+}
+
+class Car() {
+    lateinit var owner: String //means i'll initialise it later on
+
+    val myBrand: String = "BMW" // this BMW is value of field
+        //-----Custom Getter:
+        get() {
+            return field.toLowerCase()
+        }
+
+
+    var maxSpeed: Int = 250
+        //    get() = field
+        set(value) { //---------setters
+            field =
+                if (value > 0) value else throw IllegalArgumentException("Max speed cannot be less than 0")
+        }
+
+    var myModel: String = "M5"
+        private set //out myModel is now private
+
+    init {
+        this.owner = "frank"  // here "this" is unnecessary or redundant
+        this.myModel = "C4" //can only change mymodel value in same class as it is private
+    }
+
+
+}
+
+
+
+
+
+
+
+
+

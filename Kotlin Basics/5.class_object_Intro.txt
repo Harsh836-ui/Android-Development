@@ -1,0 +1,29 @@
+fun main() {
+var hrsh = Person("Harsh" , "Tiwari") //Here we created our own datatype person
+    var shilu = Person()
+    var nikita = Person(lastName = "Tiwari")
+//var shilu = Person("Shilu" , "Tiwari")
+
+    var SamsngS20 = MobilePhone("Android" ,"Samsung" , "Galaxy S20 Ultra" )
+
+
+
+}
+
+
+class Person(firstName: String = "Shilu", lastName: String = "Tiwari"){
+
+    //initialiser Block:
+    init {
+        println("Person Created with firstname = $firstName and lastname = $lastName")
+    }
+}
+
+
+class MobilePhone(osName : String , Brand : String , Model : String){
+
+    init {
+        println("Here the OsName is $osName , brand  is $Brand , Model is $Model")
+    }
+
+}

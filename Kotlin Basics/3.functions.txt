@@ -1,0 +1,28 @@
+fun main() {
+
+    var result = addUp(4, 5)
+    var result_mult = multipl(4, 5)
+    var result_avg = avg(4.7, 5.6)
+    var result_concate = concateString("harsh", "tiwari")
+    println("result is $result")
+    println("result is $result_mult")
+    println("result is $result_avg")
+    println("Result is $result_concate")
+}
+
+//parameters
+fun addUp(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun multipl(a: Int, b: Int): Int {
+    return a * b
+}
+
+fun avg(a: Double, b: Double): Double {
+    return (a + b) / 2
+}
+
+fun concateString(a: String, b: String): String {
+    return a + b
+}

@@ -1,0 +1,52 @@
+    val stringlist: List<String> = listOf("Dennis ", "Frank", "Michael", "Garry")
+    val intlist: List<Int> = listOf(1, 2, 45, 5)
+    //Mixed list:
+    val mixedtypelist: List<Any> = listOf("Harsh ", 34.2, "Tiwari", 'a', 325)
+
+   /* //To print any list:
+    for (value in mixedtypelist) {
+        println("$value")
+    }*/
+
+//Program for identification of datatype in kotlin :
+    for (value in mixedtypelist){
+        if(value is Int) println("$value is integer")
+        else if(value is Double) println("$value is Double with floor value ${ceil(value)}")
+        else if(value is String) println("$value is String of length ${value.length}")
+        else if (value is Char) println("$value is Char")
+        else println("Unknown Type")
+    }
+
+//alternatively:
+ for (value in mixedtypelist){
+        when(value)
+        {
+            is Int -> println("Integer : $value")
+            is Double -> println("Double : $value with ceil value ${floor(value)}")
+            is String -> println("String : $value with length ${value.length}")
+            else -> println("Unknown datatype")
+
+        }
+    }
+
+//----------SMART CAST:
+   val obj1: Any = "I have a dream"
+    if (obj1 !is String)
+        println("Not a string")
+    else {
+        //obj is automatically cast to a string in this scope
+        println("Found a string of length ${obj1.length}")
+    }
+
+//----Explicit (unsafe) casting using 'as' keyword :
+    val str1: String = obj1 as String
+    println(str1)
+    val obj2: Any = 1337
+//    val str2 : String  = obj2 as String
+//    println(str2)
+
+    //----Explicit (safe) casting using 'as?' keyword :
+
+    val obj3: Any = 1338
+    val str3: String? = obj3 as? String
+    println(str3) //Prints null

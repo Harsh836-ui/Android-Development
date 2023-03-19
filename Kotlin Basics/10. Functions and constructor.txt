@@ -1,0 +1,53 @@
+package harsh.my.a1kotlinbasics
+
+import kotlin.io.println as println
+import kotlin.text.toLowerCase as toLowerCase
+
+fun main() {
+
+    var hrsh = Person("Harsh", "Tiwari", 21)  //Here we created our own datatype person
+    var shilu = Person("shilu" , "Tiwari" , 24)
+
+    println("Harsh is ${hrsh.age} years old")
+    hrsh.hobby = "Valorant"
+    hrsh.statehobby()
+    shilu.statehobby()
+}
+
+
+class Person(firstName: String, lastName: String) {
+
+    //Member variable:
+    var age: Int? = null
+    var hobby: String = "Playing Games"
+    var firstName : String?=null
+
+    //initialiser Block:
+    init {
+        this.firstName = firstName
+        println("Person Created with firstname = $firstName and lastname = $lastName")
+    }
+
+
+    //Member Constructor: //secondary constructor
+    constructor(firstName: String, lastName: String, age: Int)
+            : this(firstName = firstName, lastName = lastName) {
+        this.age = age
+
+        println("Person Created with firstname = $firstName and lastname = $lastName and age = $age")
+    }
+
+
+
+
+//    Member functions: Function within a class:
+    fun statehobby() {
+
+        println("${firstName} hobby is $hobby")
+    }
+}
+
+
+
+
+
